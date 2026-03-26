@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Datatype:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Nata+Sans:wght@100..900&family=Teko:wght@300..700&display=swap"
+        rel="stylesheet">
 
 </head>
 <body>
+
+
 <header class="navbar">
     <div class="nav-container">
 
@@ -24,7 +31,7 @@
         <nav class="nav-links">
             <a href="#"  class="active">Home</a>
             <a href="About.html">About</a>
-            <a href="#">Tracks</a>
+            <!-- <a href="#">Tracks</a> -->
             <a href="#">Speakers</a>
             <a href="#">Committee</a>
             <!-- <a href="#">Call for paper</a> -->
@@ -46,17 +53,15 @@
 
     </div>
 </header>
-    
     <!-- Mobile Fullscreen Menu -->
 <div class="mobile-menu" id="mobileMenu">
     <span class="close-btn" id="closeMenu">✕</span>
 
-    <a href="#">Home</a>
+    <a href="#" class="active">Home</a>
     <a href="#">About</a>
     <a href="#">Tracks</a>
     <a href="#">Speakers</a>
-    <a href="#" class="active">Committee</a>
-    <a href="#">Call for paper</a>
+    <a href="#">Committee</a>
     <a href="#">Registrations</a>
     <a href="#">Contact</a>
 
@@ -67,6 +72,45 @@
         <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
 </div>
+
+<section class="Hero-Section video-section">
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="/resource/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <div class="content">
+        <h1>Welcome to Conference 2026</h1>
+        <p>Innovate • Inspire • Impact</p>
+    </div>
+</section>
+
+<section class="counting">
+    <div class="countdown-container">
+        <div class="counting-heading">
+            <h2 class="title">Conference Starts In  - </h2>
+        </div>
+    
+        <div class="countdown">
+            <div class="time-box">
+                <span id="days">00</span>
+                <p>Days</p>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <p>Hours</p>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <p>Minutes</p>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </div>
+</section>
     
 
     <script src="script.js"></script>
