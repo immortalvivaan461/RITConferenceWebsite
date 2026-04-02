@@ -889,6 +889,10 @@ body {
 
 /* LEFT SIDE */
 .contact-left {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     flex: 1;
 }
 
@@ -957,6 +961,7 @@ body {
     grid-template-columns: repeat(3, 90px);
     gap: 25px;
     justify-content: center;
+    
 }
 
 /* HEX STYLE */
@@ -977,6 +982,7 @@ body {
             25% 95%, 0% 50%);
 
     transition: all 0.35s ease;
+    text-decoration: none;
 }
 
 /* Glow Hover */
@@ -991,7 +997,7 @@ body {
 @media (max-width: 900px) {
     .contact-container {
         flex-direction: column;
-        text-align: center;
+        /* text-align: center; */
     }
 
     .contact-item {
@@ -1011,6 +1017,11 @@ body {
     }
 }
 
+
+/* Registration-Section */
+.registration-section {
+    height: 60vh;
+}
 
 
 .footer {
@@ -1086,6 +1097,12 @@ body {
     width: 100%;
     height: 150px;
     border: none;
+}
+
+.developer-right {
+    padding-top: 30px;
+    width: 100%;
+    text-align: center;
 }
 
 /* Responsive */
