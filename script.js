@@ -13,7 +13,7 @@ closeMenu.addEventListener("click", () => {
 
 //CountDown
 
-const targetDate = new Date("2026-12-01T09:00:00").getTime();
+const targetDate = new Date("2026-11-19T09:00:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();

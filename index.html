@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RIT Conference</title>
+    <title>RIT A++(ICAISA-2026)</title>
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -14,105 +15,314 @@
         rel="stylesheet">
 
 </head>
+
 <body>
 
 
-<header class="navbar">
-    <div class="nav-container">
+    <header class="navbar">
+        <div class="nav-container">
 
-        <!-- Logo -->
-        <div class="logo">
-            <span class="rit">RIT</span>
-            <span class="grade">A++</span>
-            <span class="conf">(ICMIS 2025)</span>
+            <!-- Logo -->
+            <div class="logo">
+                <span class="rit">RIT</span>
+                <span class="grade">A++</span>
+                <span class="conf">(ICAISA-2026)</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <nav class="nav-links">
+                <a href="./index.html" class="active">Home</a>
+                <a href="./About.html">About</a>
+                <a href="#tracks-section">Tracks</a>
+                <a href="#speaker-section">Speakers</a>
+                <a href="./commettee.html">Committee</a>
+                <a href="#">Registrations</a>
+                <a href="./contact.html">Contact</a>
+            </nav>
+
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com/roorkeerit/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/ritroorkee2005/?hl=en"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@Roorkeeinstituteoftechnology"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <!-- Mobile Menu Icon -->
+            <div class="menu-toggle" id="menuToggle">
+                ☰
+            </div>
+
         </div>
-
-        <!-- Desktop Menu -->
-        <nav class="nav-links">
-            <a href="#"  class="active">Home</a>
-            <a href="About.html">About</a>
-            <!-- <a href="#">Tracks</a> -->
-            <a href="#">Speakers</a>
-            <a href="#">Committee</a>
-            <!-- <a href="#">Call for paper</a> -->
-            <a href="#">Registrations</a>
-            <a href="#">Contact</a>
-        </nav>
-
-        <!-- Social Icons -->
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-
-        <!-- Mobile Menu Icon -->
-        <div class="menu-toggle" id="menuToggle">
-            ☰
-        </div>
-
-    </div>
-</header>
+    </header>
     <!-- Mobile Fullscreen Menu -->
-<div class="mobile-menu" id="mobileMenu">
-    <span class="close-btn" id="closeMenu">✕</span>
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="close-btn" id="closeMenu">✕</span>
 
-    <a href="#" class="active">Home</a>
-    <a href="#">About</a>
-    <a href="#">Tracks</a>
-    <a href="#">Speakers</a>
-    <a href="#">Committee</a>
-    <a href="#">Registrations</a>
-    <a href="#">Contact</a>
+        <a href="./index.html" class="active">Home</a>
+        <a href="./About.html">About</a>
+        <a href="#tracks-section">Tracks</a>
+        <a href="#speaker-section">Speakers</a>
+        <a href="./commettee.html">Committee</a>
+        <a href="#">Registrations</a>
+        <a href="./contact.html">Contact</a>
 
-    <!-- Social Icons (Mobile) -->
-    <div class="mobile-social">
-        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
-</div>
-
-<section class="Hero-Section video-section">
-    <video autoplay muted loop playsinline class="bg-video">
-        <source src="/resource/video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    
-    <div class="content">
-        <h1>Welcome to Conference 2026</h1>
-        <p>Innovate • Inspire • Impact</p>
-    </div>
-</section>
-
-<section class="counting">
-    <div class="countdown-container">
-        <div class="counting-heading">
-            <h2 class="title">Conference Starts In  - </h2>
-        </div>
-    
-        <div class="countdown">
-            <div class="time-box">
-                <span id="days">00</span>
-                <p>Days</p>
-            </div>
-            <div class="time-box">
-                <span id="hours">00</span>
-                <p>Hours</p>
-            </div>
-            <div class="time-box">
-                <span id="minutes">00</span>
-                <p>Minutes</p>
-            </div>
-            <div class="time-box">
-                <span id="seconds">00</span>
-                <p>Seconds</p>
-            </div>
+        <!-- Social Icons (Mobile) -->
+        <div class="mobile-social">
+            <a href="https://www.facebook.com/roorkeerit/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/ritroorkee2005/?hl=en"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@Roorkeeinstituteoftechnology"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
-</section>
+
+    <section class="Hero-Section video-section">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="/resource/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="content">
+            <h1>International Conference on Artificial Intelligence and Smart Applications (ICAISA-2026)</h1>
+            <p>Proceedings of the International Conference on Artificial Intelligence and Smart Applications
+                (ICAISA-2026), November
+                19-20, 2026, Roorkee, India</p>
+        </div>
+
+        <div class="counter">
+            <div class="countdown-container">
+                <div class="counting-heading">
+                    <h2 class="title">Conference Commences In - </h2>
+                </div>
+
+                <div class="countdown">
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="welcome-section" id="welcome">
+        <div class="welcome-heading">
+            <h1>Welcome to ICAISA-2026</h1>
+        </div>
+        <div class="welcoming-paragraph">
+            <p>Welcome to <b>"International Conference on Artificial Intelligence and Smart Applications
+                    (ICAISA-2026)"</b></p>
+            <p><b>A prestigious international forum </b> dedicated to advancing <b>research, innovation, and
+                    collaboration</b> in the field of <b>artificial intelligence and intelligent technologies.</b> The
+                conference serves as a <b>global hub for knowledge exchange,</b> where <b>experts, thought leaders, and
+                    innovators </b> come together to present ideas, share insights, and discuss <b>transformative
+                    technologies</b> shaping the future of <b>smart applications and digital ecosystems.</b>
+            </p>
+
+            <p>ICAISA-2026 is thoughtfully designed for a <b>diverse and interdisciplinary audience,</b> including
+                <b>academicians, researchers,
+                    doctoral scholars, postgraduate students, industry professionals, technology developers, startup
+                    founders, and
+                    policymakers.</b> Whether you are <b>presenting groundbreaking research,</b> exploring
+                <b>industry-driven solutions,</b> or aiming to stay ahead in the
+                <b>rapidly evolving AI landscape,</b> this conference offers <b>valuable opportunities for learning,
+                    networking, and global
+                    collaboration.</b>
+            </p>
+
+            <p>The conference highlights key areas such as <b>machine learning</b>, <b>deep learning</b>, <b>computer
+                    vision</b>,
+                <b>natural language processing</b>, and <b>advanced data analytics</b>, along with their applications in
+                <b>healthcare</b>, <b>smart cities</b>, <b>intelligent transportation</b>, <b>cybersecurity</b>,
+                <b>automation</b>, and
+                <b>decision-making systems</b>.
+
+                By <b>bridging the gap between theory and real-world implementation</b>, ICAISA-2026 aims to <b>foster
+                    innovation</b>,
+                <b>encourage collaboration</b>, and <b>build sustainable, intelligent systems</b> that enhance
+                <b>productivity</b> and
+                <b>quality of life worldwide</b>.
+            </p>
+        </div>
+    </section>
+
+    <section class="speakers-section" id="speaker-section">
+        <div class="welcome-heading speaker-heading">
+            <h1>Our Keynote Speakers</h1>
+        </div>
+        <div class="speakers-container">
     
+            <!-- Speaker 1 -->
+            <div class="speaker">
+                <img src="./resource/speaker1.jpg" alt="Dr Ankit Bansal">
+                <h3>Dr. Ankit Bansal</h3>
+                <p>IIT ROORKEE</p>
+            </div>
+    
+            <!-- Speaker 2 -->
+            <div class="speaker">
+                <img src="./resource/speaker2.jpg" alt="Anchit Bijalwan">
+                <h3>Anchit Bijalwan</h3>
+                <p>ASSOCIATE PROFESSOR<br>BRITISH UNIVERSITY VIETNAM</p>
+            </div>
+    
+            <!-- Speaker 3 -->
+            <div class="speaker center">
+                <img src="./resource/speaker3.jpg" alt="Muneer Khan">
+                <h3>Muneer Khan</h3>
+                <p>CADRE TECH LAB, USA</p>
+            </div>
+    
+        </div>
+    </section>
+
+    <section class="tracks-section" id="tracks-section">
+    <h2 class="section-title">Conference Tracks</h2>
+
+    <div class="tracks-container">
+
+        <div class="track-card">
+            <h3>Track 1</h3>
+            <p class="track-sub">(CSE & AI/ML)</p>
+            <ul>
+                <li>Emerging Technologies</li>
+                <li>AI & ML Based Intelligent Computing & Systems</li>
+                <li>IOT & Wireless Communication</li>
+                <li>Smart Digital India Initiative</li>
+                <li>Communication and Network Broadcast</li>
+            </ul>
+        </div>
+
+        <div class="track-card">
+            <h3>Track 2</h3>
+            <p class="track-sub">(ECE / ELECTRICAL)</p>
+            <ul>
+                <li>Power, Energy and Power Electronics</li>
+                <li>Smart Vehicles & Smart Cities</li>
+                <li>Signal Image & Communication Technology</li>
+                <li>Devices, Circuits, Materials, and Processing</li>
+                <li>Smart Grid</li>
+            </ul>
+        </div>
+
+        <div class="track-card">
+            <h3>Track 3</h3>
+            <p class="track-sub">(MECHANICAL / CIVIL)</p>
+            <ul>
+                <li>Robotics, Control, Instrumentation, and Automation</li>
+                <li>Smart Biomedical Engineering</li>
+                <li>Healthcare Technologies</li>
+                <li>Smart Analysis and Modelling</li>
+            </ul>
+        </div>
+
+        <div class="track-card">
+            <h3>Track 4</h3>
+            <p class="track-sub">(SUSTAINABILITY)</p>
+            <ul>
+                <li>Education 5.0 & Industry 5.0</li>
+                <li>Himalayan Sustainability</li>
+            </ul>
+        </div>
+
+        <div class="track-card">
+            <h3>Track 5</h3>
+            <p class="track-sub">(ALLIED SCIENCE)</p>
+            <ul>
+                <li>Engineering Physics</li>
+                <li>Engineering Chemistry</li>
+                <li>Mathematics Modelling</li>
+                <li>Linguistics</li>
+                <li>ELT</li>
+            </ul>
+        </div>
+
+    </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+            <div class="footer-col">
+                <h3>IMPORTANT LINKS</h3>
+                <ul>
+                    <li><a href="./commettee.html">Committee</a></li>
+                    <!-- <li><a href="./contact.html">Contact</a></li> -->
+                    <li><a href="#speaker-section">Speakers</a></li>
+                    <li><a href="#tracks-section">Tracks</a></li>
+                    <!-- <li><a href="#">Call for paper</a></li> -->
+                </ul>
+
+                <p class="footer-desc">
+                    ICAISA- International Conference on Artificial Intelligence and Smart Applications (ICAISA-2026)
+                </p>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./About.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+
+                <p class="footer-desc">
+                    Roorkee Institute of Technology (RIT) is one of the top-ranked colleges in Uttarakhand offering
+                    industry-aligned programs in MBA, B.Tech, B.Sc. Agriculture, BCA, BBA, Paramedical Sciences, and
+                    B.Ed.
+                </p>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-col contact">
+                <h3>Contact & Connect</h3>
+
+                <p>📧 icaisa.2025@ritroorkee.com</p>
+                <p>📞 +91 9837386973</p>
+                <p>📞 +91 7417093980</p>
+                <p>🌐 ritroorkee.com</p>
+                <p>📍 RIT Roorkee</p>
+
+                <!-- Map -->
+                <div class="map">
+                    <iframe src="https://www.google.com/maps?q=Roorkee%20Institute%20of%20Technology&output=embed"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
