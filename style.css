@@ -627,134 +627,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* About-section */
-
-/* .about-body {
-    background-attachment: fixed;
-    background: url(./resource/paper-texture.jpg) center/cover no-repeat;
-}
-
-
-
-.rit-img {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.rit-img img {
-    width: min(550px, 90%);
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 20px;
-    display: block;
-}
-
-
-
-
-.about-heading-div,
-.rit-about-heading-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
-.about-heading,
-.rit-about-heading {
-    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-    font-family: "Pacifico", cursive;
-    font-weight: 600;
-    font-style: normal;
-    border-bottom: 3px solid red;
-    display: inline-block;
-    text-align: center;
-}
-
-.icaisa-description,
-.rit-description {
-    font-weight: 400;
-    font-size: 1.2rem;
-    padding-left: 150px;
-    padding-right: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    gap: 20px;
-}
-
-@media (max-width: 600px) {
-
-    .rit-description {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
-    .icaisa-description {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
-    .rit-img img{
-        width: 90%;
-        height: auto;
-        align-self: center;
-    }
-}
-
-@media (max-width: 1000px) {
-
-    .rit-description {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
-
-    .icaisa-description {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-} */
-
 /* =========================
    BACKGROUND
 ========================= */
@@ -853,8 +725,6 @@ body {
         align-self: center;
     }
 }
-
-
 
 
 
@@ -1109,13 +979,11 @@ body {
 }
 
 
-
-
 /* Registrastion section */
 /* Section */
 
 .registration-section {
-    padding: 80px 20px;
+    padding: 60px 20px;
     background: url(./resource/RIT-1.webp) center/cover no-repeat;
 }
 

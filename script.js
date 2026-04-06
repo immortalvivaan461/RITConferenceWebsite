@@ -12,7 +12,6 @@ closeMenu.addEventListener("click", () => {
 
 
 //CountDown
-
 const targetDate = new Date("2026-11-19T09:00:00").getTime();
 
 function updateCountdown() {
@@ -37,3 +36,4 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
+

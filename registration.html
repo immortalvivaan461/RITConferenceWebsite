@@ -88,34 +88,34 @@
             </div>
     
             <!-- Form -->
-            <form class="registration-form">
+            <form id="registrationForm" class="registration-form">
             
                 <div class="form-group full">
                     <label>Full Name *</label>
-                    <input type="text" required>
+                    <input type="text" name="fullName" required>
                 </div>
             
                 <div class="form-row">
                     <div class="form-group">
                         <label>Email Address *</label>
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                     </div>
             
                     <div class="form-group">
                         <label>Phone Number *</label>
-                        <input type="tel" required>
+                        <input type="tel" name="phone" required>
                     </div>
                 </div>
             
                 <div class="form-group full">
                     <label>Complete Address *</label>
-                    <textarea rows="3" required></textarea>
+                    <textarea name="address" rows="3" required></textarea>
                 </div>
             
                 <div class="form-row">
                     <div class="form-group">
                         <label>Choose Track *</label>
-                        <select required>
+                        <select name="track" required>
                             <option value="">Select Track</option>
                             <option>Artificial Intelligence</option>
                             <option>Machine Learning</option>
@@ -126,23 +126,23 @@
             
                     <div class="form-group">
                         <label>Institution / Organization *</label>
-                        <input type="text" required>
+                        <input type="text" name="institution" required>
                     </div>
                 </div>
             
                 <div class="form-group full">
                     <label>Title of the Paper *</label>
-                    <input type="text" required>
+                    <input type="text" name="paperTitle" required>
                 </div>
             
                 <div class="form-group full">
                     <label>Registered Author Name *</label>
-                    <input type="text" required>
+                    <input type="text" name="author" required>
                 </div>
             
                 <div class="form-group full">
                     <label>Participant Type *</label>
-                    <select required>
+                    <select name="type" required>
                         <option value="">Select Type</option>
                         <option>Student</option>
                         <option>Researcher</option>
@@ -153,7 +153,7 @@
             
                 <div class="form-group full">
                     <label>Message (Optional)</label>
-                    <textarea rows="4"></textarea>
+                    <textarea name="message" rows="4"></textarea>
                 </div>
             
                 <button type="submit" class="submit-btn">Register Now</button>
@@ -225,6 +225,31 @@
         </div>
     </footer>
 
+    <script>
+        const form = document.getElementById("registrationForm");
+
+            console.log("JS Loaded"); // ✅ check this
+
+            form.addEventListener("submit", e => {
+                e.preventDefault();
+
+                console.log("Form Submitted"); // ✅ check this
+
+                fetch("https://script.google.com/macros/s/AKfycbxRI1XIJYgK_HbMiBPVuj3F9cyk6dblF2c-kWRINZQ-wm9jm6NlRaQzbqyLBCJX4zzl/exec", {
+                    method: "POST",
+                    body: new FormData(form)
+                })
+                    .then(res => {
+                        console.log("Response received"); // ✅ check this
+                        alert("Success ✅");
+                        form.reset();
+                    })
+                    .catch(err => {
+                        console.log("Error:", err);
+                        alert("Error ❌");
+                    });
+            });
+    </script>
     <script src="script.js"></script>
 </body>
 
