@@ -108,20 +108,9 @@ body {
 /* Organizing Section */
 .organizing-section {
     padding: 20px 20px;
-    /* margin-top: 40px; */
     text-align: center;
 }
 
-/* Role Block */
-/* .role-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
-.role-block {
-    /* margin-bottom: 50px; */
-}
 
 /* Role Title */
 .role-block h3 {
@@ -195,8 +184,7 @@ body {
 
 /* Desktop layout */
 .split-row .role-block {
-    flex: 1 1 350px;
-    /* flexible instead of fixed */
+    flex: 1 1 350px;/* flexible instead of fixed */
     max-width: 420px;
 }
 
@@ -216,8 +204,7 @@ body {
 
     .split-row .role-block {
         width: 100%;
-        max-width: 350px;
-        /* keeps it centered nicely */
+        max-width: 350px;/* keeps it centered nicely */
     }
 }
 
