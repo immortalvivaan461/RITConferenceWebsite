@@ -257,6 +257,7 @@ body {
 
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         background-image: url('https://res.cloudinary.com/dwsoa92iv/image/upload/v1775106842/Hero-img_woreyk.jpg');
+        /* background-image: url(./resource/Hero-img2.jpg); */
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;

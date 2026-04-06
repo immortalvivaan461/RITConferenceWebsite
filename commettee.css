@@ -14,40 +14,57 @@ body {
 .page-title {
     font-size: 2.8rem;
     color: #1E3A8A;
-    /* margin-bottom: 40px; */
-    /* display: inline-block;
-    border-bottom: 2px solid red; */
+    margin-bottom: 20px;
 }
 
+/* Section Heading */
 .section-heading {
     font-size: 1.6rem;
     color: #f4b400;
-    margin: 50px 0 20px;
+    margin: 45px auto 30px;
     display: inline-block;
     border-bottom: 2px solid rgb(194, 1, 1);
+    padding-bottom: 6px;
 }
 
 /* Rows */
 .card-row {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
     flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
 }
 
-/* Card Base */
+/* Card */
 .card {
     background: white;
     border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 22px 18px;
+    width: 240px;
+    min-height: 260px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     transition: 0.3s;
 }
 
+/* Card Image */
+.card img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #f4b400;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+/* Card Text */
 .card h3 {
-    font-size: 1rem;
-    color: #1E3A8A;
+    margin: 10px 0;
+    font-size: 1.1rem;
     font-weight: 600;
+    color: #111827;
 }
 
 .card p {
@@ -55,6 +72,7 @@ body {
     color: #6B7280;
 }
 
+/* Hover */
 .card:hover img {
     border-color: #3B82F6;
 }
@@ -64,70 +82,22 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-/* Sizes */
-.card-row.large .card {
-    width: 260px;
-}
-
-.card-row.medium .card {
-    width: 220px;
-}
-
-.card-row.medium .card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid #f4b400;
-    object-fit: cover;
-    margin-bottom: 12px;
-}
-
-.card-row.editors .card {
-    width: 240px;
-}
-
-.card-row.small .card {
-    width: 180px;
-    font-size: 0.9rem;
-}
-
-/* Images */
-.card img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid #f4b400;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-/* Text */
-.card h3 {
-    margin: 8px 0;
-    font-size: 1.1rem;
-    color: #111827;
-}
-
-.card p {
-    color: #6B7280;
-    font-size: 0.9rem;
-}
-
 /* Advisory Grid */
 .committee-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    max-width: 900px;
-    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    margin: 30px auto;
 }
 
 .member {
     background: white;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 10px;
     font-size: 0.9rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
 }
 
 .member:hover {
@@ -135,10 +105,119 @@ body {
     color: black;
 }
 
+/* Organizing Section */
+.organizing-section {
+    padding: 20px 20px;
+    /* margin-top: 40px; */
+    text-align: center;
+}
+
+/* Role Block */
+/* .role-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.role-block {
+    /* margin-bottom: 50px; */
+}
+
+/* Role Title */
+.role-block h3 {
+    color: #1E3A8A;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #f4b400;
+    display: inline-block;
+    padding-bottom: 5px;
+    /* padding-top: 10px; */
+}
+
+/* Members Row */
+.members-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Member Card */
+.member-card {
+    background: white;
+    padding: 20px 16px;
+    border-radius: 16px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+/* Member Image */
+.member-card img {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: 3px solid #f4b400;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Member Name */
+.member-card p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+/* Hover */
+.member-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+.member-card:hover img {
+    border-color: #1E3A8A;
+}
+
+/* Split Row */
+.split-row {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Desktop layout */
+.split-row .role-block {
+    flex: 1 1 350px;
+    /* flexible instead of fixed */
+    max-width: 420px;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .committee-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .split-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .split-row .role-block {
+        width: 100%;
+        max-width: 350px;
+        /* keeps it centered nicely */
     }
 }
 
