@@ -156,7 +156,10 @@
                     <textarea name="message" rows="4"></textarea>
                 </div>
             
-                <button type="submit" class="submit-btn">Register Now</button>
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Register Now</span>
+                    <span class="loader"></span>
+                </button>
             
             </form>
     
@@ -227,26 +230,31 @@
 
     <script>
         const form = document.getElementById("registrationForm");
-
-            console.log("JS Loaded"); // ✅ check this
+            const button = form.querySelector(".submit-btn");
 
             form.addEventListener("submit", e => {
                 e.preventDefault();
 
-                console.log("Form Submitted"); // ✅ check this
+                // Start loading
+                button.classList.add("loading");
+                button.disabled = true;
 
                 fetch("https://script.google.com/macros/s/AKfycbxRI1XIJYgK_HbMiBPVuj3F9cyk6dblF2c-kWRINZQ-wm9jm6NlRaQzbqyLBCJX4zzl/exec", {
                     method: "POST",
                     body: new FormData(form)
                 })
                     .then(res => {
-                        console.log("Response received"); // ✅ check this
                         alert("Success ✅");
                         form.reset();
                     })
                     .catch(err => {
                         console.log("Error:", err);
                         alert("Error ❌");
+                    })
+                    .finally(() => {
+                        // Stop loading
+                        button.classList.remove("loading");
+                        button.disabled = false;
                     });
             });
     </script>

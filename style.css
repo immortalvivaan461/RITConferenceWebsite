@@ -11,10 +11,8 @@ body {
 
 /* NAVBAR */
 .navbar {
-    background: #0b1a3a;
-    /* deep blue */
-    border-bottom: 4px solid #f4b400;
-    /* yellow accent */
+    background: #0b1a3a;                /* deep blue */
+    border-bottom: 4px solid #f4b400;   /* yellow accent */
 }
 
 .nav-container {
@@ -47,6 +45,7 @@ body {
     object-fit: contain;
 }
 
+/* Mobile Responsive NAVBAR */
 @media (max-width: 600px) {
     .logo img {
         height: 38px;
@@ -400,10 +399,6 @@ body {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 80px;
-    /* position: relative;
-    background-image: url(./resource/Rit-logo.png) center/cover no-repeat;
-    background-position: center; */
-
 }
 
 /* Overlay layer */
@@ -752,17 +747,43 @@ body {
 
 
 
-/* Contact-Page */
+/* ================= CONTACT SECTION ================= */
+
+.globe {
+    color: #4da3ff;
+}
+.location {
+    color: #fb0008;
+}
+
+.phone {
+    color: #00c853;
+}
+
+.whatsapp {
+    color: #25D366;
+}
+
+/* .sms {
+    color: #ff9800;
+}
+
+.email {
+    color: #ea4335;
+} */
 
 .contact-section {
-    background: linear-gradient(135deg, #1c344d, #142839);
+    /* background: linear-gradient(135deg, #1c344d, #142839); */
+    background: url(./resource/contact-bg.jpg) center/cover no-repeat;
     padding: 80px 20px;
     color: #fff;
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
+    min-height: 90vh;
 }
 
-/* Layout */
+/* ================= LAYOUT ================= */
+
 .contact-container {
     max-width: 1200px;
     margin: auto;
@@ -770,25 +791,49 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 60px;
+    flex-wrap: wrap;
+    /* 👈 important for responsiveness */
 }
 
-/* LEFT SIDE */
+/* ================= HEADING ================= */
+
+.contact-right {
+    flex: 1 1 100%;
+    /* 👈 full width row on desktop top */
+    text-align: center;
+}
+
+.contact-right h2 {
+    font-size: clamp(40px, 6vw, 80px);
+    font-weight: 800;
+    letter-spacing: 6px;
+    color: #f4a825;
+    margin-bottom: 30px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ================= CONTACT INFO ================= */
+
+.contact-list {
+    padding-left: 100px;
+}
+
 .contact-left {
-    flex-direction: column;
+    flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    flex: 1;
 }
 
 .contact-item {
     display: flex;
     gap: 18px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     align-items: flex-start;
 }
 
-/* Icon Circle */
+/* ICON */
 .icon-wrap {
     min-width: 50px;
     height: 50px;
@@ -802,14 +847,13 @@ body {
     transition: 0.3s;
 }
 
-/* Hover */
 .contact-item:hover .icon-wrap {
     background: #f4a825;
     color: #142839;
     transform: translateY(-3px);
 }
 
-/* Text */
+/* TEXT */
 .contact-item h4 {
     margin: 0;
     font-size: 18px;
@@ -824,32 +868,18 @@ body {
     line-height: 1.6;
 }
 
-/* RIGHT SIDE */
-.contact-right {
-    flex: 1;
-    text-align: center;
-    position: relative;
-}
+/* ================= HEX GRID ================= */
 
-.contact-right h2 {
-    font-size: clamp(40px, 6vw, 80px);
-    font-weight: 800;
-    letter-spacing: 6px;
-    color: #f4a825;
-    margin-bottom: 40px;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-/* HEX GRID */
 .hex-wrapper {
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(3, 90px);
     gap: 25px;
     justify-content: center;
-    
+    align-content: center;
 }
 
-/* HEX STYLE */
+/* HEX */
 .hex {
     width: 90px;
     height: 90px;
@@ -870,7 +900,6 @@ body {
     text-decoration: none;
 }
 
-/* Glow Hover */
 .hex:hover {
     background: #f4a825;
     color: #142839;
@@ -878,21 +907,90 @@ body {
     box-shadow: 0 0 25px rgba(244, 168, 37, 0.6);
 }
 
-/* RESPONSIVE */
+/* ================= TABLET ================= */
+
+/* ================= TABLET ================= */
 @media (max-width: 900px) {
+
     .contact-container {
         flex-direction: column;
-        /* text-align: center; */
+        align-items: center;
+        gap: 35px;
+        text-align: center;
+        /* 👈 unify alignment */
+    }
+
+    .contact-list {
+            padding-left: 0px;
+        }
+
+    .contact-section{
+        padding: 35px 20px;
+    }
+
+    /* HEADING */
+    .contact-right {
+        order: 1;
+        width: 100%;
+    }
+
+    .contact-right h2 {
+        font-size: clamp(30px, 8vw, 42px);
+        letter-spacing: 3px;
+        margin-bottom: 30px;
+    }
+
+    /* CONTACT INFO */
+    .contact-left {
+        order: 2;
+        width: 100%;
+        align-items: center;
+        /* 👈 center block */
     }
 
     .contact-item {
+        text-align: left;
+        max-width: 420px;
+        width: 100%;
+    }
+
+    /* HEX GRID */
+    .hex-wrapper {
+        order: 3;
         justify-content: center;
+        margin-top: 10px;
     }
 }
 
+/* ================= MOBILE ================= */
 @media (max-width: 500px) {
+
+    .contact-section {
+        padding: 35px 15px;
+    }
+
+    .contact-right h2 {
+        font-size: 45px;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+    }
+
+    /* CONTACT ITEMS */
+    .contact-item {
+        gap: 12px;
+        max-width: 100%;
+    }
+
+    .icon-wrap {
+        min-width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    /* HEX GRID FIX (important alignment improvement) */
     .hex-wrapper {
         grid-template-columns: repeat(2, 75px);
+        gap: 18px;
     }
 
     .hex {
@@ -1110,6 +1208,49 @@ body {
 .submit-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(234, 179, 8, 0.4);
+}
+
+
+/* Button layout */
+.submit-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Loader hidden by default */
+.loader {
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-top: 3px solid #111827;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: none;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading state */
+.submit-btn.loading .loader {
+    display: inline-block;
+}
+
+.submit-btn.loading .btn-text {
+    opacity: 0.6;
+}
+
+/* Disable click */
+.submit-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
 }
 
 /* Responsive */

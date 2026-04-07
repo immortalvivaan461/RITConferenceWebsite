@@ -14,14 +14,14 @@ body {
 .page-title {
     font-size: 2.8rem;
     color: #1E3A8A;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 /* Section Heading */
 .section-heading {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: #f4b400;
-    margin: 45px auto 30px;
+    margin: 35px auto 30px;
     display: inline-block;
     border-bottom: 2px solid rgb(194, 1, 1);
     padding-bottom: 6px;
@@ -117,7 +117,7 @@ body {
     color: #1E3A8A;
     margin-bottom: 15px;
     margin-top: 15px;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     border-bottom: 2px solid #f4b400;
     display: inline-block;
     padding-bottom: 5px;
@@ -157,7 +157,7 @@ body {
 
 /* Member Name */
 .member-card p {
-    font-size: 0.95rem;
+    font-size: 1remrem;
     font-weight: 600;
     color: #111827;
     margin: 0;
