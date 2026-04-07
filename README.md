@@ -20,14 +20,14 @@ A modern, responsive conference website built using **HTML, CSS, and JavaScript*
 ├── index.html
 ├── about.html
 ├── committee.html
+├── committee.css
 ├── contact.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── assets/
-│   ├── images/
-│   └── icons/
+├── registration.html
+├──── style.css
+├──── script.js
+├── resource/
+│   ├── images..
+│   └── icons...
 ```
 
 ---
@@ -72,24 +72,26 @@ Name | Email | Phone | Address | Track | Institution | Paper Title | Author | Ty
 ```javascript
 function doPost(e) {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  var data = JSON.parse(e.postData.contents);
+
+  var data = e.parameter;
 
   sheet.appendRow([
-    data.name,
+    data.fullName,
     data.email,
     data.phone,
     data.address,
     data.track,
     data.institution,
-    data.paper,
+    data.paperTitle,
     data.author,
     data.type,
-    data.message
+    data.message,
+    new Date()
   ]);
 
   return ContentService
-    .createTextOutput(JSON.stringify({ status: "success" }))
-    .setMimeType(ContentService.MimeType.JSON);
+    .createTextOutput("Success")
+    .setMimeType(ContentService.MimeType.TEXT);
 }
 ```
 
@@ -108,33 +110,35 @@ function doPost(e) {
 
 ### ⚙️ Step 5: Connect Form (JavaScript)
 
-```javascript
-const form = document.querySelector(".registration-form");
+```registration page ---> <script>
+const form = document.getElementById("registrationForm");
+            const button = form.querySelector(".submit-btn");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+            form.addEventListener("submit", e => {
+                e.preventDefault();
 
-  const formData = {
-    name: form.name.value,
-    email: form.email.value,
-    phone: form.phone.value,
-    address: form.address.value,
-    track: form.track.value,
-    institution: form.institution.value,
-    paper: form.paper.value,
-    author: form.author.value,
-    type: form.type.value,
-    message: form.message.value
-  };
-
-  await fetch("YOUR_SCRIPT_URL_HERE", {
-    method: "POST",
-    body: JSON.stringify(formData)
-  });
-
-  alert("Registration successful!");
-  form.reset();
-});
+                // Start loading
+                button.classList.add("loading");
+                button.disabled = true;
+                //Update your link here ||
+                fetch("YOUR_SCRIPT_URL_HERE", {
+                    method: "POST",
+                    body: new FormData(form)
+                })
+                    .then(res => {
+                        alert("Success ✅");
+                        form.reset();
+                    })
+                    .catch(err => {
+                        console.log("Error:", err);
+                        alert("Error ❌");
+                    })
+                    .finally(() => {
+                        // Stop loading
+                        button.classList.remove("loading");
+                        button.disabled = false;
+                    });
+            });
 ```
 
 ---
@@ -158,8 +162,8 @@ form.addEventListener("submit", async (e) => {
 
 ## 👨‍💻 Developed By
 
-* Website Developer: *Your Name*
-* Project: ICAISA-2026 Conference Website
+* Website Developer: *Vivaan Saroj*
+* Project: RIT ICAISA-2026 Conference Website
 
 ---
 
