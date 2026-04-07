@@ -20,7 +20,7 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: auto;
-    padding: 15px 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,6 +33,24 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    /* control size */
+    width: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .logo img {
+        height: 38px;
+    }
 }
 
 .logo .rit {
