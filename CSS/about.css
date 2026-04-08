@@ -1,0 +1,98 @@
+/* =========================
+   BACKGROUND
+========================= */
+.about-body {
+    background: url(../resource/paper-texture.jpg) center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* =========================
+   IMAGE SECTION
+========================= */
+.rit-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.rit-img img {
+    width: min(550px, 90%);
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+.about-heading-div,
+.rit-about-heading-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.about-heading,
+.rit-about-heading {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    font-family: "Pacifico", cursive;
+    font-weight: 600;
+    border-bottom: 3px solid red;
+    display: inline-block;
+    text-align: center;
+}
+
+
+/* =========================
+   TEXT CONTENT
+========================= */
+.icaisa-description,
+.rit-description {
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding-left: 150px;
+    padding-right: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* =========================
+   RESPONSIVE (TABLET + MOBILE)
+========================= */
+@media (max-width: 1000px) {
+
+    .rit-description,
+    .icaisa-description {
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 1rem;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE (MOBILE ONLY)
+========================= */
+@media (max-width: 600px) {
+
+    .rit-description,
+    .icaisa-description {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .rit-img img {
+        width: 90%;
+        height: auto;
+        align-self: center;
+    }
+}
