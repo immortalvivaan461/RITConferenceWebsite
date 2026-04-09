@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RIT A++(ICAISA-2026)</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./CSS/registration.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +16,6 @@
 </head>
 
 <body>
-
     <header class="navbar">
         <div class="nav-container">
 
@@ -33,10 +31,9 @@
                 <a href="./index.html">Home</a>
                 <a href="./About.html">About</a>
                 <a href="./important-dates.html">Important Dates</a>
-                <a href="./callforpaper.html">Call For Paper</a>
+                <a href="./callforpaper.html" class="active">Call For Paper</a>
                 <a href="./commettee.html">Committee</a>
-                <!-- <a href="#">Call for paper</a> -->
-                <a href="./registration.html" class="active">Registrations</a>
+                <a href="./registration.html">Registrations</a>
                 <a href="./contact.html">Contact</a>
             </nav>
 
@@ -61,9 +58,9 @@
         <a href="./index.html">Home</a>
         <a href="./About.html">About</a>
         <a href="./important-dates.html">Important Dates</a>
-        <a href="./callforpaper.html">Call For Paper</a>
+        <a href="./callforpaper.html" class="active">Call For Paper</a>
         <a href="./commettee.html">Committee</a>
-        <a href="./registration.html" class="active">Registrations</a>
+        <a href="./registration.html">Registrations</a>
         <a href="./contact.html">Contact</a>
 
         <!-- Social Icons (Mobile) -->
@@ -74,99 +71,8 @@
         </div>
     </div>
 
+    <section>call fo paper</section>
 
-    <section class="registration-section">
-    
-        <div class="registration-container">
-    
-            <!-- Left Content -->
-            <div class="registration-info">
-                <h2>Register for ICAISA-2026</h2>
-                <p>
-                    Please fill in the required details to participate in ICAISA-2026, an international conference bringing together
-                    researchers, academicians, and industry professionals.
-                </p>
-            </div>
-    
-            <!-- Form -->
-            <form id="registrationForm" class="registration-form">
-            
-                <div class="form-group full">
-                    <label>Full Name *</label>
-                    <input type="text" name="fullName" required>
-                </div>
-            
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Email Address *</label>
-                        <input type="email" name="email" required>
-                    </div>
-            
-                    <div class="form-group">
-                        <label>Phone Number *</label>
-                        <input type="tel" name="phone" required>
-                    </div>
-                </div>
-            
-                <div class="form-group full">
-                    <label>Complete Address *</label>
-                    <textarea name="address" rows="3" required></textarea>
-                </div>
-            
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Choose Track *</label>
-                        <select name="track" required>
-                            <option value="">Select Track</option>
-                            <option>Artificial Intelligence</option>
-                            <option>Machine Learning</option>
-                            <option>Smart Devices & IoT</option>
-                            <option>Sustainability</option>
-                        </select>
-                    </div>
-            
-                    <div class="form-group">
-                        <label>Institution / Organization *</label>
-                        <input type="text" name="institution" required>
-                    </div>
-                </div>
-            
-                <div class="form-group full">
-                    <label>Title of the Paper *</label>
-                    <input type="text" name="paperTitle" required>
-                </div>
-            
-                <div class="form-group full">
-                    <label>Registered Author Name *</label>
-                    <input type="text" name="author" required>
-                </div>
-            
-                <div class="form-group full">
-                    <label>Participant Type *</label>
-                    <select name="type" required>
-                        <option value="">Select Type</option>
-                        <option>Student</option>
-                        <option>Researcher</option>
-                        <option>Academician</option>
-                        <option>Industry Professional</option>
-                    </select>
-                </div>
-            
-                <div class="form-group full">
-                    <label>Message (Optional)</label>
-                    <textarea name="message" rows="4"></textarea>
-                </div>
-            
-                <button type="submit" class="submit-btn">
-                    <span class="btn-text">Register Now</span>
-                    <span class="loader"></span>
-                </button>
-            
-            </form>
-    
-        </div>
-    
-    </section>
 
 
 
@@ -179,8 +85,8 @@
                 <ul>
                     <li><a href="./commettee.html">Committee</a></li>
                     <li><a href="./registration.html">Registration</a></li>
-                    <li><a href="./index.html#speaker-section">Speakers</a></li>
-                    <li><a href="./index.html#tracks-section">Tracks</a></li>
+                    <li><a href="#speaker-section">Speakers</a></li>
+                    <li><a href="#tracks-section">Tracks</a></li>
                     <!-- <li><a href="#">Call for paper</a></li> -->
                 </ul>
 
@@ -234,36 +140,6 @@
         </div>
     </footer>
 
-    <script>
-        const form = document.getElementById("registrationForm");
-            const button = form.querySelector(".submit-btn");
-
-            form.addEventListener("submit", e => {
-                e.preventDefault();
-
-                // Start loading
-                button.classList.add("loading");
-                button.disabled = true;
-
-                fetch("https://script.google.com/macros/s/AKfycbxRI1XIJYgK_HbMiBPVuj3F9cyk6dblF2c-kWRINZQ-wm9jm6NlRaQzbqyLBCJX4zzl/exec", {
-                    method: "POST",
-                    body: new FormData(form)
-                })
-                    .then(res => {
-                        alert("Success ✅");
-                        form.reset();
-                    })
-                    .catch(err => {
-                        console.log("Error:", err);
-                        alert("Error ❌");
-                    })
-                    .finally(() => {
-                        // Stop loading
-                        button.classList.remove("loading");
-                        button.disabled = false;
-                    });
-            });
-    </script>
     <script src="script.js"></script>
 </body>
 

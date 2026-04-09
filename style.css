@@ -654,17 +654,23 @@ body {
 
 
 .welcome-section {
+    position: relative;
     width: 100%;
     padding-top: 50px;
     padding-bottom: 80px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url(./resource/Hero-img2.jpg) center/cover no-repeat;
+    background-attachment: fixed;
 }
+
+
 
 /* Overlay layer */
 .section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.656);
     /* 🔥 Increase for lower visibility */
     z-index: 0;
 }
@@ -695,6 +701,7 @@ body {
     display: inline-block;
     /* important */
     text-align: center;
+    color: white;
 }
 
 
@@ -715,6 +722,13 @@ body {
     justify-content: center;
     align-self: center;
     gap: 20px;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.about-more-btn{
+    align-items: center;
+    text-align: center;
 }
 
 /* ---------------------------- */
@@ -735,6 +749,13 @@ body {
     text-align: center;
     font-size: 20px;
     border-radius: 12px;
+}
+
+.box h3{
+    font-size: 1.75rem;
+}
+.box p {
+    font-size: 1rem;
 }
 
 .box1 {
@@ -792,6 +813,10 @@ body {
     background: #f5f5f5;
     padding: 50px 20px;
     position: relative;
+}
+
+.speaker-heading h1{
+    color: black;
 }
 
 /* Grid Layout */
