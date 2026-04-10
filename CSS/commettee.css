@@ -163,6 +163,11 @@ body {
     margin: 0;
 }
 
+.lighter-span{
+    font-weight: 400;
+    color: #6B7280;
+}
+
 /* Hover */
 .member-card:hover {
     transform: translateY(-8px);
