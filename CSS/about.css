@@ -1,101 +1,126 @@
 /* =========================
-   BACKGROUND
+   ROOT COLORS (YOUR THEME)
 ========================= */
-.about-body {
-    background: url(../resource/paper-texture.jpg) center/cover no-repeat;
-    background-attachment: fixed;
+:root {
+    --primary: #1E3A8A;
+    --secondary: #3B82F6;
+    --text-dark: #111827;
+    --text-light: #6B7280;
+    --bg-light: #F9FAFB;
 }
-
 
 /* =========================
-   IMAGE SECTION
+   BASE
 ========================= */
-.rit-img {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-light);
+    margin: 0;
 }
 
-.rit-img img {
-    width: min(550px, 90%);
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 20px;
-    display: block;
+/* =========================
+   WRAPPER
+========================= */
+.about-wrapper {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
 }
 
+/* =========================
+   HERO
+========================= */
+.about-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.about-hero p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* =========================
+   CARD STYLE
+========================= */
+.about-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+}
 
 /* =========================
    HEADINGS
 ========================= */
-.about-heading-div,
-.rit-about-heading-div {
+.about-card h2,
+.about-content h2 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* =========================
+   TEXT
+========================= */
+.about-card p,
+.about-content p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   SPLIT SECTION
+========================= */
+.about-split {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 25px 0;
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
-.about-heading,
-.rit-about-heading {
-    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-    font-family: "Pacifico", cursive;
-    font-weight: 600;
-    border-bottom: 3px solid red;
-    display: inline-block;
-    text-align: center;
+/* IMAGE */
+.about-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-
-/* =========================
-   TEXT CONTENT
-========================= */
-.icaisa-description,
-.rit-description {
-    font-weight: 400;
-    font-size: 1.2rem;
-    padding-left: 150px;
-    padding-right: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    padding-bottom: 30px;
-}
-
-.rit-description{
-    padding-top: 20px;
+/* CONTENT */
+.about-content {
+    flex: 1;
 }
 
 /* =========================
-   RESPONSIVE (TABLET + MOBILE)
+   TRUST CARD SPECIAL
 ========================= */
-@media (max-width: 1000px) {
-
-    .rit-description,
-    .icaisa-description {
-        padding-left: 25px;
-        padding-right: 25px;
-        font-size: 1rem;
-    }
+.trust-card {
+    border-left: 5px solid var(--secondary);
 }
 
-
 /* =========================
-   RESPONSIVE (MOBILE ONLY)
+   RESPONSIVE
 ========================= */
-@media (max-width: 600px) {
-
-    .rit-description,
-    .icaisa-description {
-        padding-left: 25px;
-        padding-right: 25px;
+@media (max-width: 900px) {
+    .about-split {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .rit-img img {
-        width: 90%;
-        height: auto;
-        align-self: center;
+    .about-image img {
+        max-width: 100%;
     }
 }
