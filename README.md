@@ -19,12 +19,20 @@ A modern, responsive conference website built using **HTML, CSS, and JavaScript*
 ```
 ├── index.html
 ├── about.html
+├── important-dates.html
+├── callforpaper.html
 ├── committee.html
 ├── committee.css
-├── contact.html
 ├── registration.html
+├── contact.html
 ├──── style.css
 ├──── script.js
+├── CSS/
+│   ├── about.css
+│   ├── callforpaper.css
+│   ├── commettee.css
+│   ├── contact.css
+│   └── registration.css
 ├── resource/
 │   ├── images..
 │   └── icons...
@@ -36,9 +44,11 @@ A modern, responsive conference website built using **HTML, CSS, and JavaScript*
 
 * **Home** → Overview + Hero section
 * **About** → Conference + Institute details
+* **Important Dates** → Conference and Submission Dates
+* **Call For Paper** → About the Conference, Conference Tracks, Important Dates, Submission Guidelines,  Publication Details, Submission Process, Templates
 * **Committee** → Organized team structure
-* **Tracks** → Conference themes
 * **Registration** → Form submission
+* **Speakers** → Keynote Speakers
 * **Contact** → Location & communication
 
 ---
@@ -154,7 +164,7 @@ const form = document.getElementById("registrationForm");
 ## 💡 Future Improvements
 
 * ✅ Form validation (error handling)
-* ✅ Loading spinner on submit
+* ✅ Backend Integration
 * ✅ Email confirmation system
 * ✅ Admin dashboard
 
