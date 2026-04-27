@@ -163,6 +163,12 @@ body {
     margin: 0;
 }
 
+.committee-grid-heading {
+    display: inline;
+    color: #1E3A8A;
+    border-bottom: 1px solid red;
+}
+
 .lighter-span{
     font-weight: 400;
     color: #6B7280;

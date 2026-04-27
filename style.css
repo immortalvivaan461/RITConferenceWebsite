@@ -805,7 +805,7 @@ html {
         flex-direction: column;
         padding-left: 25px;
         padding-right: 25px;
-        text-align: center;
+        /* text-align: center; */
     }
 }
 
