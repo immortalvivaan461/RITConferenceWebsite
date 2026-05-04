@@ -26,7 +26,7 @@
 
 .contact-section {
     /* background: linear-gradient(135deg, #1c344d, #142839); */
-    background: url(../resource/contact-bg.jpg) center/cover no-repeat;
+    background: url("https://res.cloudinary.com/dwsoa92iv/image/upload/v1775106840/contact-bg_pc1b1f.jpg") center/cover no-repeat;
     padding: 80px 20px;
     color: #fff;
     font-family: 'Poppins', sans-serif;

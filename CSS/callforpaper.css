@@ -589,10 +589,123 @@
 }
 
 
+/* 🔹 Peer Review & Ethics Section */
+
+
+.cfp-ethics {
+    padding: 80px 20px;
+    background: #f9fafb;
+}
+
+/* Bottom split only */
+.ethics-bottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+    align-items: start;
+}
+
+.ethics-download {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ethics-download-box h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.ethics-download-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 18px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+@media (max-width: 768px) {
+
+    .cfp-ethics {
+        padding: 60px 15px;
+    }
+
+    .ethics-bottom {
+        grid-template-columns: 1fr;
+        /* stack */
+        gap: 25px;
+    }
+
+    .ethics-download {
+        justify-content: flex-start;
+        /* avoid awkward center */
+        align-items: flex-start;
+    }
+
+    .ethics-download-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .ethics-download-box h3 {
+        font-size: 18px;
+    }
+
+    .ethics-download-box p {
+        font-size: 13px;
+    }
+
+    .cfp-btn.primary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .ethics-bottom {
+        grid-template-columns: 1.5fr 1fr;
+        /* slightly balanced */
+        gap: 25px;
+    }
+
+    .ethics-download-box {
+        max-width: 280px;
+        width: 100%;
+    }
+
+    .ethics-download-box h3 {
+        font-size: 19px;
+    }
+
+    .ethics-download-box p {
+        font-size: 14px;
+    }
+}
+
+
+
 /* Submission Section */
 .cfp-submission {
     padding: 80px 20px;
-    background: #f9fafb;
+    background: #ffffff;
 }
 
 /* Steps Grid */
@@ -606,7 +719,7 @@
 
 /* Step Card */
 .step {
-    background: #ffffff;
+    background: #f9fafb;
     padding: 20px;
     border-radius: 12px;
     display: flex;
@@ -658,7 +771,7 @@
 /* Template Section */
 .cfp-templates {
     padding: 80px 20px;
-    background: #ffffff;
+    background:#f9fafb;
 }
 
 /* Grid */
@@ -672,7 +785,7 @@
 
 /* Card */
 .template-card {
-    background: #f9fafb;
+    background: #ffffff;
     padding: 25px;
     border-radius: 14px;
     text-align: center;
